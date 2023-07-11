@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS in head</title>
+
+    <script>
+        function myQuestion() {
+            document.getElementById("question").innerHTML = "New Delhi";
+        }
+    </script>
+</head>
+<body>
+    <h2>JS in head</h2>
+
+    <p id="question" >What is the capital of India?</p>
+
+    <button type="button" onclick="myQuestion()">Answer</button>
+
+    <h2>JS in body</h2>
+
+    <p id="question2">What is the population of India as of 2023?</p>
+
+    <button type="button" onclick="myQuestion2()">Answer</button>
+
+    <script>
+        function myQuestion2() {
+            document.getElementById("question2").innerHTML = "1.4 Billion" 
+        }
+    </script>
+
+    <h2>External JS</h2>
+
+    <p id="question3">What is the currency of India?</p>
+
+    <button type="button" onclick="myQuestion3()">Answer</button>
+
+    <script src="externalJS.js"></script>
+</body>
+</html>
