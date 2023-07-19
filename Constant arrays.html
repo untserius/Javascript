@@ -6,13 +6,66 @@
     <title>Constant Arrays</title>
 </head>
 <body>
+
+    <h1>Constant Arrays and Objects</h1>
+
+    <h2>Constant Arrays</h2>
+
+    <p>const cars = ["BMW", "Audi", "Tesla", "Ford"];<br>
+        cars = ["Honda", "Toyota", "Hyundai"];</p>
+
     <p id="eg"></p>
+    <p id="eg2"></p>
 
     <script>
-        const cars = ["BMW", "Audi", "Tesla", "Ford"];
-        cars = ["Honda", "Toyota", "Hyundai"];
 
-        document.getElementById("eg").innerHTML = cars;
+        // You can NOT reassign a constant array.
+
+        try {
+            const cars = ["BMW", "Audi", "Tesla", "Ford"];
+            cars = ["Honda", "Toyota", "Hyundai"];
+        }
+
+        catch (err) {
+            document.getElementById("eg").innerHTML = err;
+        }
+
+        // You can change the elements of a constant array.
+
+        const bikes = ["Kawasaki", "Yamaha", "Suzuki", "Ducati"];
+        bikes[0] = "Harley Davidson";
+        bikes.push("Royal Enfield");
+
+        document.getElementById("eg2").innerHTML = bikes;
+    </script>
+
+    <h2>Constant Objects</h2>
+
+    <p><strong>const bike</strong> = {type:"Royal Enfield", model:"Himalayan 411", color:"Granite Black"};
+        <br>
+        <strong>bike</strong> = {type:"KTM" , model:"Duke 390", color:"Orange"};</p>
+    <p id="example"></p>
+    <p id="example2"></p>
+    <script>
+
+        // You can NOT reassign a constant object.
+
+        try {
+            const bike = {type:"Royal Enfield", model:"Himalayan 411", color:"Granite Black"};
+            bike = {type:"KTM" , model:"Duke 390", color:"Orange"};
+        } // to throw an error
+
+        catch (err) {
+            document.getElementById("example").innerHTML = err;
+        } // to catch the error
+
+        // You can change the properties of a constant object.
+
+        const bike = {type:"Royal Enfield", model:"Himalayan 411", color:"Lake Blue"};
+        bike.color = "Granite Black"; // to change a property
+        bike.owner = "Serius"; // to add a property
+
+        document.getElementById("example2").innerHTML = "The bike is a " + bike.type + " " + bike.model + " of color " + bike.color + " owned by " + bike.owner + ".";
     </script>
 </body>
 </html>
