@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Please open console to see output</p>
+    <script>
+        // example of this keyword.
+
+        const myDetails = {
+            firstName: "Sudhir",
+            lastName: "Das",
+            age: 23,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        console.log(myDetails.fullName());
+
+        const myEducation = {
+            college: "Veer Surendra Sai University of Technology",
+            degree: "Bachelor of Technology",
+            branch: "Chemical Engineering",
+            graduationYear: 2022,
+            fullDetail: function () {
+                return "I did my graduated from " + this.college + " " + "with " + this.degree + " " + "in " + this.branch + " " + "on " + this.graduationYear + ".";
+            }
+        }
+
+        console.log(myEducation.fullDetail());
+    </script>
+</body>
+</html>
