@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <script>
+            // foreach
+
+            // 1
+            const a = [1,2,3,4,5,6,7,8,9,10];
+
+            a.forEach(
+                function(val) {
+                    console.log(val * 10);
+                }
+            );
+
+            // 2
+            const b = [12,213,434,523,12,45,31];
+
+            b.forEach(
+                function(val) {
+                    console.log(val + 2);
+                }
+            );
+
+            //3. 
+            const c = [87, 45, 123, 67, 2, 71, 1]
+
+            c.forEach(
+                function(val) {
+                    console.log(val);
+                }
+            );
+
+            // for in 
+
+            // 1.
+            const detail = {
+                name: "Sudhir",
+                age: 23,
+                city: "Phulbani"
+            }
+
+            for (var key in detail) {
+                console.log(key);
+            }
+
+            for (var key in detail) {
+                console.log(key, detail[key]);
+            }
+
+            const person = {name: "Harry", lName: "Potter", age: 25}
+
+            // 2.
+            let text = "";
+            for (var key in person) {
+                text = text + person[key] + " ";
+            }
+
+            console.log(text);
+
+            // 3.
+            let nums = [12, 43, 13, 44, 78]
+
+            let result = "";
+            for (var key in nums) {
+                result += nums[key] + "\n";
+            }
+
+            console.log(result)
+
+            // do-while
+
+            // 1. 
+
+            let x = 100;
+
+            do{
+                console.log("Hello!");
+                x++;
+            }while(x < 120);
+
+        </script>
+    </body>
+</html>

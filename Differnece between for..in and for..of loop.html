@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>for..in loop was there in ES5 Javascript, which is used to enumerates the enumerable properties of an object irrespective of type.</p>
+    <p>for..of was introduced in ES6 Javascript, which is used to iterate over iterable objects like arrays, strings, sets, maps, etc.</p>
+
+    <p>Note: we can use for..in loop everywhere to access everything in key:value pair format.</p>
+
+    <script>
+        // Given an object
+        const date = {
+            day: 21, 
+            month: "July", 
+            year: 2023
+        }
+
+        // Given an array
+        const nums = [1, 2, 3, 4, 5, 6, 7]
+
+        // for..in loop for object
+        for(var key in date) {
+            console.log(key, date[key])
+        }
+
+        //for..in loop for array (not recommended)
+        for(var key in nums) {
+            console.log(key, nums[key]);
+        }
+
+        /*
+        //for..of loop for object (error)
+        for(var key of date) {
+            console.log(key, date[key])
+        }
+        */
+
+        //for..of loop for array (recommended)
+        for(var key of nums) {
+            console.log(key);
+        }        
+    </script>
+</body>
+</html>
