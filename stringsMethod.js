@@ -65,8 +65,6 @@ let abc2 = sample2.toLowerCase();
 
 console.log(abc2);
 
-// concat()
-
 
 
 
