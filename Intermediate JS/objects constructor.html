@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function Player(name, age) {
+				this.name = name;
+				this.age = age;
+				this.sayName = function () {
+					console.log(name);
+				};
+			}
+
+			Player.prototype.sayHello = function () {
+				console.log("Hello, I'am a player!");
+			};
+
+			const player1 = new Player("Sudhir", 23);
+			player1.sayName();
+			player1.sayHello();
+
+			const player2 = new Player("Vegeta", 2099);
+			player2.sayName();
+			player1.sayHello();
+
+			// ---------------------------------------------------------------------------------
+			function Book(title, author, pages, status) {
+				this.title = title;
+				this.author = author;
+				this.pages = pages;
+				this.status = status;
+				this.info = function () {
+					const readStatus = this.status ? "read" : "not read yet";
+					return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatus}`;
+				};
+			}
+
+			const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
+			console.log(theHobbit.info());
+
+			// -------------------------------------------------------------------------------------
+
+			let person1 = {
+				name: "Sudhir",
+				age: 23,
+				city: "Bhubaneswar",
+				getInfo: function () {
+					console.log(this.name + ", age " + this.age + " from " + this.city);
+				},
+			};
+
+			let person2 = {
+				name: "Rahul",
+				age: 25,
+			};
+		</script>
+	</body>
+</html>
